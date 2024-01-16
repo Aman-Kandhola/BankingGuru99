@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestingBanking" duration-ms="750" started-at="2024-01-16T22:23:52 IST" finished-at="2024-01-16T22:23:53 IST">
+    <groups>
+    </groups>
+    <test name="Regression" duration-ms="750" started-at="2024-01-16T22:23:52 IST" finished-at="2024-01-16T22:23:53 IST">
+      <class name="Tests.RegistrationTest">
+        <test-method status="PASS" signature="initObj()[pri:0, instance:Tests.RegistrationTest@2e3fc542]" name="initObj" is-config="true" duration-ms="22960" started-at="2024-01-16T22:23:29 IST" finished-at="2024-01-16T22:23:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initObj -->
+        <test-method status="PASS" signature="register()[pri:0, instance:Tests.RegistrationTest@2e3fc542]" name="register" duration-ms="641" started-at="2024-01-16T22:23:52 IST" finished-at="2024-01-16T22:23:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register -->
+      </class> <!-- Tests.RegistrationTest -->
+      <class name="Tests.LoginTest">
+        <test-method status="PASS" signature="loginmethod()[pri:0, instance:Tests.LoginTest@43a0cee9]" name="loginmethod" duration-ms="5" started-at="2024-01-16T22:23:53 IST" finished-at="2024-01-16T22:23:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginmethod -->
+      </class> <!-- Tests.LoginTest -->
+    </test> <!-- Regression -->
+  </suite> <!-- TestingBanking -->
+</testng-results>
