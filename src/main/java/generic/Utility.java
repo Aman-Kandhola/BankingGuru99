@@ -1,5 +1,7 @@
 package generic;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -30,6 +32,15 @@ public class Utility {
 	  e.sendKeys(inputText);
   }
   
+  
+//Function to Switch to iframe
+	public void switchto(WebElement we) {
+		driver.switchTo().frame(we);
+	}
+  
+  public void implictWait(int Seconds) {
+	   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Seconds));
+  }
   
 	public WebDriver getDriver() {
 		
