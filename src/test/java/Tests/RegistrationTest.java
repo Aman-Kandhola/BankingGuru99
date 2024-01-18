@@ -11,5 +11,6 @@ public class RegistrationTest extends BaseClass{
 		//System.out.println("this is Registration class");
 		UserRegister obj = new UserRegister(utilObj);
 		obj.goToRegisterPage();
+	    System.out.print("this is the");
 	}
 }
