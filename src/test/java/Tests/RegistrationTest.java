@@ -12,16 +12,23 @@ public class RegistrationTest extends BaseClass{
 		//System.out.println("this is Registration class");
 		UserRegister obj = new UserRegister(utilObj);
 		obj.goToRegisterPage();
-
-	    System.out.print("this is the");
-
-		obj.SwitchIframe();
-		
+		obj.SwitchIframe1();
 		utilObj.implictWait(10);
-		System.out.print("This is the change in main branch");
 		//Thread.sleep(5000);
 		
-		obj.choseAdd();
+		try {
+		//if(obj.chooseAdd()!=null) {
+			obj.CloseAdd1();
+		//}
+		}
+		catch(Exception e) {
+			System.out.print(e);
+			obj.SwitchIframe2();
+			obj.CloseAdd2();
+		}
+		
+		obj.enterEmail("aman@mailinator.com");
+		
 		}
 
 	}

@@ -16,11 +16,17 @@ public class UserRegister extends UserRegisterOR{
 	
 	
 	
-	public void SwitchIframe() {
-		utilObjReg.switchto(addIframe);
+	public void SwitchIframe1() {
+		utilObjReg.switchto(addIframe1);
 	}
 	
 	
+	public void SwitchIframe2() {
+		utilObjReg.switchto(addIframe2);
+	}
+	
+	
+	/*
 	public void choseAdd() {
 		if(closeAdd1 != null) {
 			utilObjReg.clickAction(closeAdd1);
@@ -28,6 +34,29 @@ public class UserRegister extends UserRegisterOR{
 		else {
 			utilObjReg.clickAction(closeAdd2);
 		}
+	}
+	*/
+	
+
+/*	public WebElement chooseAdd2() {
+		return closeAdd2;
+	}
+	
+	
+	public WebElement chooseAdd() {
+		return closeAdd1;
+	}
+	*/
+	public void CloseAdd1() {
+		utilObjReg.clickAction(closeAdd1);
+	}
+	
+	public void CloseAdd2() {
+		utilObjReg.clickAction(closeAdd2);
+	}
+	
+	public void enterEmail(String email) {
+		utilObjReg.sendText(enterEmailforRegistration, email);
 	}
 	
 	

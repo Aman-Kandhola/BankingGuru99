@@ -1,7 +1,14 @@
 package generic;
 
+import java.io.IOException;
+import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.Duration;
 
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -38,6 +45,33 @@ public class Utility {
 		driver.switchTo().frame(we);
 	}
   
+	
+//Function to read data from CSV
+	public void ReadFromCSV(String path) throws IOException {
+        
+        /* Create a new BufferReader object and pass the path of CSV file
+        Reader reader = Files.newBufferedReader(Paths.get(path));
+         
+        // parse the file into csv values
+        CSVParser parse = new CSVParser(reader, CSVFormat.DEFAULT);
+ 
+        for (CSVRecord csvRecord : parse) {
+            
+            // Accessing Values by Column Index
+            String firstname = csvRecord.get(0);
+            //String lastName = csvRecord.get(1);
+            //String company = csvRecord.get(2);
+             
+            // print the value to console
+            System.out.println("Record No - " + csvRecord.getRecordNumber());
+             
+            System.out.println("FirstName : " + firstname);
+ 
+        }*/
+	}
+	
+	
+	
   public void implictWait(int Seconds) {
 	   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Seconds));
   }
