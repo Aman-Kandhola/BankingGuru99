@@ -1,5 +1,6 @@
 package generic;
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
@@ -12,6 +13,9 @@ import org.apache.commons.csv.CSVRecord;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvValidationException;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -71,8 +75,26 @@ public class Utility {
 	}
 	
 	
+	//This is to check the pasword
+
+public String CSVread() throws CsvValidationException, IOException {
+	String Email="";
+	String CSVPath= "/Users/wits/eclipse-workspace/BankingGuru99/Data/Data.csv";
 	
-  public void implictWait(int Seconds) {
+	CSVReader readEmail = new CSVReader(new FileReader(CSVPath));
+	String [] csvCell;
+
+	  while ((csvCell = readEmail.readNext()) != null) { 
+	  
+	   Email = csvCell[0];
+	 
+}
+	  return Email;
+}
+
+
+	
+	public void implictWait(int Seconds) {
 	   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Seconds));
   }
   
