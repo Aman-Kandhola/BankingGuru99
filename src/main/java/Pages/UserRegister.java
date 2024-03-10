@@ -1,7 +1,11 @@
 package Pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+
+import com.opencsv.exceptions.CsvValidationException;
 
 import generic.Utility;
 
@@ -55,8 +59,13 @@ public class UserRegister extends UserRegisterOR{
 		utilObjReg.clickAction(closeAdd2);
 	}
 	
-	public void enterEmail(String email) {
+	/*public void enterEmail(String email) {
 		utilObjReg.sendText(enterEmailforRegistration, email);
+	}*/
+	
+	public void enterEmailCSV() throws CsvValidationException, IOException {
+		String mail = utilObjReg.CSVread();
+		utilObjReg.sendText(enterEmailforRegistration, mail);
 	}
 	
 	

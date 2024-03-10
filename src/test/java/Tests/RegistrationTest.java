@@ -1,14 +1,18 @@
 package Tests;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
+
+import com.opencsv.exceptions.CsvValidationException;
 
 import Pages.UserRegister;
 
 public class RegistrationTest extends BaseClass{
 
 	@Test
-	public void register() {
+	public void register() throws CsvValidationException, IOException {
 		//System.out.println("this is Registration class");
 		UserRegister obj = new UserRegister(utilObj);
 		obj.goToRegisterPage();
@@ -27,7 +31,7 @@ public class RegistrationTest extends BaseClass{
 			obj.CloseAdd2();
 		}
 		
-		obj.enterEmail("aman@mailinator.com");
+		obj.enterEmailCSV();
 		
 		}
 

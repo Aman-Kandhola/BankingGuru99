@@ -3,6 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [TestingBanking]">
   <test thread-count="5" name="Regression(failed)">
     <classes>
+      <class name="Tests.LoginTest">
+        <methods>
+          <include name="loginmethod"/>
+        </methods>
+      </class> <!-- Tests.LoginTest -->
       <class name="Tests.RegistrationTest">
         <methods>
           <include name="initObj"/>
